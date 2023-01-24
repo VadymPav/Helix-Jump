@@ -190,6 +190,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1592449661342418028}
+  - component: {fileID: -6630419655914931498}
   m_Layer: 0
   m_Name: Ring002
   m_TagString: Untagged
@@ -221,6 +222,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-6630419655914931498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2112843719818469078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a761c6a92455d1b41b043a3fb65d1647, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2492394186621743739
 GameObject:
   m_ObjectHideFlags: 0

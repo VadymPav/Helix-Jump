@@ -9,9 +9,10 @@ public class HelixManager : MonoBehaviour
     public float ySpawn = 0;
     public float ringDistance = 5;
 
-    public int numberOfRings = 7;
+    public int numberOfRings;
     void Start()
     {
+        numberOfRings = GameManager.currentLevelIndex + 5;
         for (int i = 0; i < numberOfRings; i++)
         {
             if (i == 0)
