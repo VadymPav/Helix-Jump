@@ -61,8 +61,8 @@ public class GameManager : MonoBehaviour
 
         scoreText.text = score.ToString();
 
-        //if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began && !isGameStarted)
-        if (Input.GetMouseButton(0) && !isGameStarted )
+        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began && !isGameStarted)
+        //if (Input.GetMouseButton(0) && !isGameStarted )
         {
             if(EventSystem.current.IsPointerOverGameObject(Input.GetTouch(0).fingerId)) return;
             
@@ -104,6 +104,12 @@ public class GameManager : MonoBehaviour
     public void IncreaseMoney()
     {
         coins++;
+        PlayerPrefs.SetInt("Coins", coins);
+    }
+
+    public void DecreaseMoney(int value)
+    {
+        coins -= value;
         PlayerPrefs.SetInt("Coins", coins);
     }
 }
