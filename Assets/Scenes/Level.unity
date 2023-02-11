@@ -600,6 +600,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   locked: 1
   coinsCost: 15
+  skinName: samuro
   costContainer: {fileID: 712212449}
   skinCostText: {fileID: 1063685297}
 --- !u!1 &87368443
@@ -3968,6 +3969,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   locked: 1
   coinsCost: 5
+  skinName: soccer
   costContainer: {fileID: 87368443}
   skinCostText: {fileID: 2088491009}
 --- !u!1 &1331214723
@@ -4131,6 +4133,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   locked: 1
   coinsCost: 10
+  skinName: smile
   costContainer: {fileID: 1610920051}
   skinCostText: {fileID: 1455772433}
 --- !u!1 &1335076875
@@ -5140,6 +5143,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   locked: 0
   coinsCost: 0
+  skinName: default
   costContainer: {fileID: 496093447}
   skinCostText: {fileID: 1362708455}
 --- !u!1 &1619232717

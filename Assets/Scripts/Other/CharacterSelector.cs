@@ -8,9 +8,11 @@ public class CharacterSelector : MonoBehaviour
 
     public Skin[] _Skin;
     private int selectedCharacter;
+    
     // Start is called before the first frame update
     void Start()
     {
+        selectedCharacter = PlayerPrefs.GetInt("Current", 0);
         foreach (GameObject ch in characters)
         {
             ch.SetActive(false);
@@ -26,5 +28,6 @@ public class CharacterSelector : MonoBehaviour
         characters[selectedCharacter].SetActive(false);
         characters[newCharacter].SetActive(true);
         selectedCharacter = newCharacter;
+        PlayerPrefs.SetInt("Current", selectedCharacter);
     }
 }

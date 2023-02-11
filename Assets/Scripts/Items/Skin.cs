@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 
@@ -5,40 +6,44 @@ public class Skin : MonoBehaviour
 {
     public bool locked;
     public int coinsCost;
+    public string skinName;
 
     public GameObject costContainer;
     public TextMeshProUGUI skinCostText;
 
+    private void Awake()
+    {
+        locked = GetBool(skinName);
+    }
+
     private void Start()
     {
 
-        if (locked)
+        if (this.locked)
         {
-            SetBool("locked", true);
-            skinCostText.text = coinsCost.ToString();
+           skinCostText.text = coinsCost.ToString();
         }
         else
         {
-            SetBool("locked", false);
             costContainer.SetActive(false);
         }
-        locked = GetBool("locked");
+        
     }
 
     public void Unlocking()
     {
-        if (!locked)
+        if (!this.locked)
         {
             return;
         }
 
-        if (locked)
+        if (this.locked)
         {
             if (coinsCost <= GameManager.coins)
             {
                 costContainer.SetActive(false);
                 locked = false;
-                SetBool("locked", false);
+                SetBool(skinName, false);
             }
             else if(coinsCost > GameManager.coins)
             {
